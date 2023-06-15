@@ -22,7 +22,7 @@ function AnimatedSVG() {
       <Container style={{ position: "relative" }}>
         <motion.div
           style={{
-            opacity: 0.2,
+            opacity: 0.1,
             top: "calc(50% - 90px)",
             left: "calc(50% - 90px)",
             translateX: `var(--scroll-width)`,
@@ -78,6 +78,7 @@ function App() {
       }}
       className="dark"
     >
+      <AnimatedSVG />
       <AnimatePresence presenceAffectsLayout={false}>
         {selectedProject ? (
           <Overlay
@@ -184,7 +185,7 @@ function App() {
                   <Card
                     style={{
                       background: "rgba(125, 125, 125, 0.1)",
-                      backdropFilter: "blur(4px)",
+                      backdropFilter: "blur(1px)",
                     }}
                   >
                     <Stack spacingY={"0.5rem"}>

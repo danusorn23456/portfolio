@@ -1,6 +1,6 @@
-import React, { HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 import styled from "styled-components";
-import { device, size } from "~/theme";
+import { size } from "~/theme";
 import { mediaCSSBuilder } from "~/utils";
 
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {

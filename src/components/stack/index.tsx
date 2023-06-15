@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled, { CSSProperties } from "styled-components";
-import { DeviceObject, device } from "~/theme";
+import { DeviceObject } from "~/theme";
 import { mediaCSSBuilder } from "~/utils";
 
 export interface StackProps {
