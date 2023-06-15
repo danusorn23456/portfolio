@@ -1,0 +1,47 @@
+@import url(./variable.css);
+@import url(./reset.css);
+
+:root {
+  font-family: 'Syne', sans-serif;
+  color-scheme: light dark;
+  color: var(--black);
+  background-color: var(--white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,html,#root{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar{
+  width: var(--scroll-width);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+*::-webkit-scrollbar-thumb {
+  background:linear-gradient(to bottom,var(--primary-base),var(--secondary-base));
+  border-radius: 0.5rem;
+}
+

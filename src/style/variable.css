@@ -1,0 +1,63 @@
+:root {
+  --scroll-width:12px;
+  --white: #FFFFFF;
+  --black: #000000;
+  --primary-darker: #DC5000;
+  --primary-dark: #F55900;
+  --primary-base: #FF7729;
+  --primary-light: #FF975C;
+  --primary-lighter: #FFA876;
+  --secondary-darker: #7F0D8E;
+  --secondary-dark: #9410A5;
+  --secondary-base: #BE14D4;
+  --secondary-light: #D630EB;
+  --secondary-lighter: #DB47EE;
+  --background-darker: #1F1F1F;
+  --background-dark: #2B2B2B;
+  --background-base: #454545;
+  --background-light: #5F5F5F;
+  --background-lighter: #6B6B6B;
+  --surface-darker: #9C9C9C;
+  --surface-dark: #A9A9A9;
+  --surface-base: #C2C2C2;
+  --surface-light: #DBDBDB;
+  --surface-lighter: #E8E8E8;
+  --info-darker: #0047A3;
+  --info-dark: #0052BD;
+  --info-base: #0068F0;
+  --info-light: #2483FF;
+  --info-lighter: #3E91FF;
+  --notice-darker: #925602;
+  --notice-dark: #AB6402;
+  --notice-base: #DD8203;
+  --notice-light: #FC9C17;
+  --notice-lighter: #FCA730;
+  --positive-darker: #1D6B01;
+  --positive-dark: #238401;
+  --positive-base: #31B701;
+  --positive-light: #3FEA01;
+  --positive-lighter: #48FE07;
+  --negative-darker: #7F1F1F;
+  --negative-dark: #942424;
+  --negative-base: #BD2E2E;
+  --negative-light: #D34B4B;
+  --negative-lighter: #D85F5F;
+}
+     
+@media (prefers-color-scheme: dark){
+ :root{
+   --white:#000000;
+   --black:#FFFFFF;
+   --surface-darker:#1F1F1F;
+   --surface-dark:#1F1F1F;
+   --surface-base:#454545;
+   --surface-light:#5F5F5F;
+   --surface-lighter:#6B6B6B;
+   --background-darker:#9C9C9C;
+   --background-dark:#9C9C9C;
+   --background-base:#C2C2C2;
+   --background-light:#DBDBDB;
+   --background-lighter:#E8E8E8;
+  }
+}
+     
