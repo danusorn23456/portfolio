@@ -1,6 +1,6 @@
 {
-  "name": "danusorn23456.github.io",
-  "private": true,
+  "name": "portfolio",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
