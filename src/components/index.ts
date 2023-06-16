@@ -9,3 +9,4 @@ export * from "./grid";
 export * from "./overlay";
 export * from "./box";
 export * from "./tag";
+export * from "./dark-mode-toggle";
