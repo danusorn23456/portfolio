@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { TextProperties, TextVariant } from "~/type";
 import { CSSBuilderValue, mediaCSSBuilder } from "~/utils";
+import { Box } from "../box";
 
 export interface TextProps extends TextProperties {}
 
@@ -36,11 +37,12 @@ const fontSizeMap: Record<TextVariant, CSSBuilderValue> = {
   span: "inherit",
 };
 
-const Text = styled.p<TextProps>`
+const Text = styled(Box)<TextProps>`
   width: fit-content;
   line-height: 140%;
   ${(p) =>
     mediaCSSBuilder([
+      ["color", p.color || "var(--black)", (v) => v],
       ["text-align", p.textAlign || "left", (v) => v],
       ["font-size", p.fontSize || fontSizeMap[p.variant || "p"], (v) => v],
       [
@@ -52,7 +54,6 @@ const Text = styled.p<TextProps>`
         (v) => v,
       ],
     ])}
-
   ${(p) =>
     p.gradient &&
     css`
@@ -60,7 +61,7 @@ const Text = styled.p<TextProps>`
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    `}
+    `};
 `;
 
 export { Text };

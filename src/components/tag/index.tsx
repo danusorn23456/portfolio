@@ -27,6 +27,7 @@ const statusColorMap = {
 };
 
 const Tag = styled.div<TagProps>`
+  color: var(--black);
   list-style: none;
   white-space: nowrap;
   width: fit-content;

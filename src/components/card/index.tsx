@@ -2,27 +2,24 @@ import styled from "styled-components";
 import {
   BackgroundProperties,
   EdgeProperties,
+  PositionProperties,
   SizingProperties,
   SpacingProperties,
 } from "~/type";
 import { mediaCSSBuilder } from "~/utils";
+import { Box } from "../box";
 
 export interface CardProps
   extends SizingProperties,
     SpacingProperties,
     BackgroundProperties,
-    EdgeProperties {}
+    EdgeProperties,
+    PositionProperties {}
 
-const Card = styled.div<CardProps>`
+const Card = styled(Box)<CardProps>`
   ${(p) =>
     mediaCSSBuilder([
-      ["padding", p.padding || p.padding === 0 || "0.3rem", (v) => v],
-      ["min-width", p.minWidth, (v) => v],
-      ["width", p.width, (v) => v],
-      ["max-width", p.maxWidth, (v) => v],
-      ["min-height", p.minHeight, (v) => v],
-      ["height", p.height, (v) => v],
-      ["max-height", p.maxHeight, (v) => v],
+      ["padding", p.padding || p.padding === 0 || "1rem", (v) => v],
     ])}
   ${(p) =>
     !p.borderless &&
@@ -33,7 +30,6 @@ const Card = styled.div<CardProps>`
     ])}
   border-radius: 0.375rem;
   overflow: hidden;
-  cursor: pointer;
 `;
 
 export { Card };
