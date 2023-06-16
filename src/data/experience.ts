@@ -1,4 +1,14 @@
-const experience = [
+export type ExpereinceItem = {
+  company: string;
+  role: string;
+  description: string;
+  date: string;
+  tag: string[] | [];
+};
+
+export type ExpereinceItems = ExpereinceItem[];
+
+const experience: ExpereinceItems = [
   {
     company: "QBox Point",
     role: "frontend developer",
@@ -10,12 +20,27 @@ const experience = [
     at each stage of the work we undertake with the Jira
     software task tracker.`,
     date: "Jun 2021 - Jun 2022",
+    tag: [
+      "api caching",
+      "form validation",
+      "ui creator",
+      "content management system",
+      "multi project handle",
+      "jira task",
+    ],
   },
   {
     company: "Buzzfreez Solution",
     role: "frontend developer",
     description: `building a responsive website with multiple language support and i18n for real-time video conferences over web sockets while focusing on layout and responsiveness to deal with the complex layout and we taking client feedback into account at every stage for greater clarity.`,
     date: "May 2021 - Nov 2021",
+    tag: [
+      "responsive ui",
+      "socket.io",
+      "web deisign",
+      "trello task",
+      "zoom client meeting",
+    ],
   },
   {
     company: "Government agency",
@@ -24,6 +49,7 @@ const experience = [
     Create a responsive website to promote the local tourism business. and we use the Google api application in several areas.
     `,
     date: "Sep 2020 - Oct 2020",
+    tag: ["responsive ui", "material ui", "google map"],
   },
   {
     company: "KillSwitch",
@@ -32,6 +58,7 @@ const experience = [
     I'm making a responsive website page about cryptocurrencies with a focus on some entertaining UI animation. I enjoy fancy-looking websites.
     `,
     date: "May 2021",
+    tag: ["responsive ui"],
   },
 ];
 
