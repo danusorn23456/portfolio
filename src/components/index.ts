@@ -1,7 +1,6 @@
 export * from "./page";
 export * from "./container";
 export * from "./section";
-export * from "./gradient-text";
 export * from "./text";
 export * from "./stack";
 export * from "./card";

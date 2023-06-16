@@ -2,7 +2,6 @@ import {
   Page,
   Section,
   Container,
-  GradientText,
   Text,
   Stack,
   Card,
@@ -19,10 +18,10 @@ import { useState } from "react";
 function AnimatedSVG() {
   return (
     <Overlay zIndex={-1} key="animated-screen" transparent>
-      <Container style={{ position: "relative" }}>
+      <Container position="relative">
         <motion.div
           style={{
-            opacity: 0.1,
+            opacity: 0.3,
             top: "calc(50% - 90px)",
             left: "calc(50% - 90px)",
             translateX: `var(--scroll-width)`,
@@ -63,6 +62,7 @@ function AnimatedSVG() {
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>();
+  const gradienVar = ["var(--primary-base) 0%", "var(--secondary-base) 50%"];
 
   function clearSelectedProject() {
     setSelectedProject(null);
@@ -90,7 +90,7 @@ function App() {
             layoutId={`${selectedProject.name}`}
           >
             <Container>
-              <Stack align="center" spacingY={"auto"}>
+              <Stack align="center" spaceY={"auto"}>
                 <Image maxWidth={"300px"} src={selectedProject.imageSrc} />
                 <Text>{selectedProject.paragraph}</Text>
               </Stack>
@@ -103,52 +103,49 @@ function App() {
       <Section name="about-me">
         <Container>
           <Stack
-            style={{
-              height: "100vh",
-            }}
+            height={"100vh"}
             direction={{ mobile: "column", tablet: "row" }}
             justify="center"
             align="center"
           >
             <Stack>
-              <GradientText size={"1.875rem"} as={"h2"}>
+              <Text variant="h2" as={"h2"} gradient={gradienVar}>
                 Human, GUITAR
-              </GradientText>
+              </Text>
               <Text>
-                i am a passionate frontend developer, who is dedicated to
+                i am a{" "}
+                <Text as="span" gradient={gradienVar}>
+                  passionate frontend developer,
+                </Text>{" "}
+                who is dedicated to
                 <br />
                 creating and maintaining exceptional web interfaces
                 <br />
                 love to sharing my knowledge of web technologies with others
                 <br />
-                and also actively engaged throughout the day.
+                and als{" "}
+                <Text as="span" gradient={gradienVar}>
+                  actively engaged throughout the day.
+                </Text>
               </Text>
             </Stack>
           </Stack>
         </Container>
       </Section>
-      <Stack spacingY={"15rem"}>
+      <Stack spaceY={"15rem"}>
         <Section name="tool">
           <Container>
-            <Stack
-              style={{
-                minHeight: "100vh",
-                position: "relative",
-              }}
-              spacingY={"auto"}
-            >
-              <GradientText size="2rem" as={"h2"}>
+            <Stack position="relative" minHeight={"100vh"} spaceY={"auto"}>
+              <Text variant="h2" as={"h2"} gradient={gradienVar}>
                 skills
-              </GradientText>
+              </Text>
               <Grid cols={{ mobile: 1, tablet: 2, laptop: 4 }} gap={"auto"}>
                 {skills.map(({ category, items }, index) => (
-                  <Stack
-                    key={index}
-                    style={{ width: "100%" }}
-                    spacingY={"1rem"}
-                  >
-                    <GradientText as="h3">{category}</GradientText>
-                    <Stack spacingY={"1rem"} as="ul">
+                  <Stack key={index} style={{ width: "100%" }} spaceY={"1rem"}>
+                    <Text variant="h3" as="h3" gradient={gradienVar}>
+                      {category}
+                    </Text>
+                    <Stack spaceY={"1rem"} as="ul">
                       {items.map(({ title }, index) => (
                         <Text
                           key={index}
@@ -167,10 +164,10 @@ function App() {
         </Section>
         <Section name="experience">
           <Container>
-            <Stack spacingY="auto">
-              <GradientText size={"2rem"} as={"h2"}>
+            <Stack spaceY="auto">
+              <Text variant="h2" as={"h2"} gradient={gradienVar}>
                 experience
-              </GradientText>
+              </Text>
               {experience.map((exp, index) => (
                 <Stack
                   key={index}
@@ -179,18 +176,18 @@ function App() {
                     opacity: 1,
                     transition: { duration: 1 },
                   }}
-                  spacingY={"0.5rem"}
+                  spaceY={"0.5rem"}
                 >
                   <Text as="sub">{exp.date}</Text>
                   <Card
-                    style={{
-                      background: "rgba(125, 125, 125, 0.1)",
-                      backdropFilter: "blur(1px)",
-                    }}
+                    background="rgba(125, 125, 125, 0.1)"
+                    backdropFilter="blur(4px)"
                   >
-                    <Stack spacingY={"0.5rem"}>
+                    <Stack spaceY={"0.5rem"}>
                       <Stack>
-                        <GradientText as="h2">{exp.company}</GradientText>
+                        <Text role="h2" as="h2" gradient={gradienVar}>
+                          {exp.company}
+                        </Text>
                         <Text>{exp.role}</Text>
                       </Stack>
                       <Text>{exp.description}</Text>
@@ -203,10 +200,10 @@ function App() {
         </Section>
         <Section name="project">
           <Container>
-            <Stack spacingY={"auto"}>
-              <GradientText size={"2rem"} as={"h2"}>
+            <Stack spaceY={"auto"}>
+              <Text role="h2" as={"h2"} gradient={gradienVar}>
                 my favorite project
-              </GradientText>
+              </Text>
               <Grid gap="auto" cols={{ mobile: 2, laptop: 3 }}>
                 {projects.map((project, index) => (
                   <Card
