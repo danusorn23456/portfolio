@@ -17,6 +17,11 @@ export type SizingProperties = {
   maxHeight?: CSSBuilderValue | CSSProperties["maxHeight"];
 };
 
+export type InteractProperties = {
+  pointerEvents?: CSSBuilderValue | CSSProperties["pointerEvents"];
+  cursor?: CSSBuilderValue | CSSProperties["cursor"];
+};
+
 export type ImageProperties = {
   grayscale?: string;
   ratio?: CSSBuilderValue | CSSProperties["aspectRatio"];
@@ -79,6 +84,8 @@ export type PositionProperties = {
   right?: CSSBuilderValue | CSSProperties["right"];
   bottom?: CSSBuilderValue | CSSProperties["bottom"];
   left?: CSSBuilderValue | CSSProperties["left"];
+  inset?: CSSBuilderValue | CSSProperties["inset"];
+  zIndex?: CSSBuilderValue | CSSProperties["zIndex"];
 };
 
 export type FlexProperties = {
