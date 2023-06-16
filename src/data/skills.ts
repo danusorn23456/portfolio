@@ -9,10 +9,10 @@ export const skills: SkillItems = [
     category: "Javascript",
     items: [
       {
-        title: "ReactJS",
+        title: "React",
       },
       {
-        title: "NextJS",
+        title: "Next",
       },
       {
         title: "Typescript",
@@ -46,7 +46,7 @@ export const skills: SkillItems = [
         title: "Framer Motion",
       },
       {
-        title: "Green Sock Animation",
+        title: "GSAP",
       },
     ],
   },
@@ -58,9 +58,6 @@ export const skills: SkillItems = [
       },
       {
         title: "Redux",
-      },
-      {
-        title: "Context",
       },
     ],
   },
@@ -102,10 +99,21 @@ export const skills: SkillItems = [
         title: "Github",
       },
       {
+        title: "Gitlab",
+      },
+      {
         title: "Trello",
       },
       {
         title: "Jira",
+      },
+    ],
+  },
+  {
+    category: "Deploy",
+    items: [
+      {
+        title: "Vercel",
       },
     ],
   },
