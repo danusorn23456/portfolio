@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect } from "react";
+import { CSSProperties, forwardRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 import { Box } from "../box";
@@ -14,7 +14,9 @@ export interface OverlayProps {
 }
 
 const StyledOverlay = styled(Box)<OverlayProps>`
-  z-index: ${(p) => p.zIndex || "unset"};
+  z-index: ${(p) => p.zIndex || 1100};
+  height: 100vh;
+  overflow: auto;
   position: fixed;
   inset: 0;
   background: ${(p) =>
@@ -25,37 +27,35 @@ const StyledOverlay = styled(Box)<OverlayProps>`
   pointer-events: ${(p) => (p.transparent ? "none" : "auto")};
 `;
 
-function Overlay({
-  onClose,
-  escapeToClose,
-  clickToClose,
-  ...rest
-}: OverlayProps) {
-  function handleKeyPress(e: KeyboardEvent) {
-    if (e.key === "Escape" && onClose) {
-      onClose();
-    }
+const Overlay = forwardRef<HTMLDivElement, OverlayProps>(
+  ({ onClose, escapeToClose, clickToClose, ...rest }, ref) => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && onClose) {
+        onClose();
+      }
+    };
+
+    useEffect(
+      function addKeyEvent() {
+        if (!escapeToClose && !onClose) return;
+        window.addEventListener("keydown", handleKeyPress);
+        return () => {
+          window.removeEventListener("keydown", handleKeyPress);
+        };
+      },
+      [escapeToClose, onClose]
+    );
+
+    return createPortal(
+      <StyledOverlay
+        ref={ref}
+        onClick={clickToClose && onClose ? onClose : () => null}
+        {...rest}
+      />,
+      document.body,
+      rest.key
+    );
   }
-
-  useEffect(
-    function addKeyEvent() {
-      if (!escapeToClose && !onClose) return;
-      window.addEventListener("keydown", handleKeyPress);
-      return () => {
-        window.removeEventListener("keydown", handleKeyPress);
-      };
-    },
-    [escapeToClose, onClose]
-  );
-
-  return createPortal(
-    <StyledOverlay
-      onClick={clickToClose && onClose ? onClose : () => null}
-      {...rest}
-    />,
-    document.body,
-    rest.key
-  );
-}
+);
 
 export { Overlay };
