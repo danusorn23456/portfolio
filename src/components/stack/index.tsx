@@ -1,20 +1,28 @@
-import styled, { CSSProperties } from "styled-components";
-import { DeviceObject } from "~/theme";
-import { SizingProperties, SpacingProperties } from "~/type";
+import styled from "styled-components";
+import {
+  FlexProperties,
+  PositionProperties,
+  SizingProperties,
+  SpacingProperties,
+} from "~/type";
 import { mediaCSSBuilder } from "~/utils";
 
-export interface StackProps extends SizingProperties, SpacingProperties {
-  flex?: CSSProperties["flex"];
-  position?: CSSProperties["position"];
-  align?: CSSProperties["alignItems"];
-  justify?: CSSProperties["justifyContent"];
-  direction?: "row" | "column" | DeviceObject<"row" | "column">;
+export interface StackProps
+  extends SizingProperties,
+    SpacingProperties,
+    PositionProperties,
+    FlexProperties {
+  align?: FlexProperties["alignItems"];
+  justify?: FlexProperties["justifyContent"];
+  gap?: SpacingProperties["space"];
+  wrap?: FlexProperties["flexWrap"];
 }
 
 const Stack = styled.div<StackProps>`
   display: flex;
   ${(p) =>
     mediaCSSBuilder([
+      ["flex-wrap", p.wrap, (v) => v],
       ["position", p.position, (v) => v],
       ["flex", p.flex, (v) => v],
       ["min-width", p.minWidth, (v) => v],
@@ -27,11 +35,11 @@ const Stack = styled.div<StackProps>`
       ["align-items", p.align || "flexStart", (v) => v],
       ["justify-content", p.justify || "flex-start", (v) => v],
     ])}
-  & > *:not(:first-child) {
-    ${(p) =>
+  & > * {
+    ${({ spaceX, spaceY, gap }) =>
       mediaCSSBuilder([
-        ["margin-top", p.spaceY === "auto" ? "2rem" : p.spaceY, (v) => v],
-        ["margin-left", p.spaceX === "auto" ? "2rem" : p.spaceX, (v) => v],
+        ["margin-top", spaceY === "auto" ? "2rem" : spaceY || gap, (v) => v],
+        ["margin-right", spaceX === "auto" ? "2rem" : spaceX || gap, (v) => v],
       ])}
   }
 `;
