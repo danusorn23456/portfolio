@@ -40,7 +40,7 @@ function Layout({ children }: LayoutProps) {
             >
               Human Tar
             </Text>
-            <DarkModeToggle />
+            <DarkModeToggle defaultDark={true} />
           </Stack>
         </Container>
       </Box>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 export interface DarkModeToggleProps {
   rootId?: string;
   className?: string;
+  defaultDark?: boolean;
 }
 
 const Toggle = {
@@ -51,7 +52,10 @@ const Toggle = {
   `,
 };
 
-function DarkModeToggle({ className = "dark-mode" }: DarkModeToggleProps) {
+function DarkModeToggle({
+  className = "dark-mode",
+  defaultDark,
+}: DarkModeToggleProps) {
   const [isDark, setIsDark] = useState<boolean>(false);
   const containerRef = useRef<HTMLBodyElement>();
 
@@ -62,7 +66,7 @@ function DarkModeToggle({ className = "dark-mode" }: DarkModeToggleProps) {
     }
   }
 
-  function toggleMode() {
+  function toggleMode(isDark?: boolean) {
     if (!containerRef.current) {
       const root = document.getElementsByTagName("body")[0];
       if (!root) {
@@ -70,13 +74,17 @@ function DarkModeToggle({ className = "dark-mode" }: DarkModeToggleProps) {
       }
       containerRef.current = root;
     }
-
-    containerRef.current.classList.toggle(className);
+    if (isDark) {
+      containerRef.current.classList.add(className);
+    } else {
+      containerRef.current.classList.toggle(className);
+    }
   }
 
   useEffect(() => {
+    toggleMode(true);
     updateIsDark();
-  }, []);
+  }, [defaultDark]);
 
   return (
     <Toggle.Root>
