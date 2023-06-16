@@ -16,6 +16,7 @@ const Toggle = {
     justify-content: space-between;
   `,
   Button: styled.div`
+    transition: all 200ms;
     scale: 0.8;
     position: relative;
     width: 2rem;
