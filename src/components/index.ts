@@ -7,3 +7,5 @@ export * from "./card";
 export * from "./image";
 export * from "./grid";
 export * from "./overlay";
+export * from "./box";
+export * from "./tag";
