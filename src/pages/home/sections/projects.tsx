@@ -70,9 +70,14 @@ function Projects({}: ProjectsProps) {
                   onClick={() => setSelectedProject(project)}
                 >
                   <MotionImage
+                    initial={"hidden"}
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 },
+                    }}
                     ratio={"16/9"}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
                     src={project.imageSrc}
                   />
                 </MotionCard>

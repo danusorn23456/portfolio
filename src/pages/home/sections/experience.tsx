@@ -25,10 +25,12 @@ function Experience({}: ExperienceProps) {
           {experience.map((exp, index) => (
             <MotionStack
               key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 1 },
+              initial={"hidden"}
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
               }}
               spaceY={"0.5rem"}
             >
