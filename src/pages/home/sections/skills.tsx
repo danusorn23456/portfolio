@@ -1,4 +1,12 @@
-import { Container, Grid, Section, Stack, Text } from "~/components";
+import {
+  Container,
+  Grid,
+  Section,
+  Stack,
+  TechStackIcon,
+  TechStackName,
+  Text,
+} from "~/components";
 import { skills } from "~/data";
 
 export interface SkillsProps {}
@@ -29,9 +37,15 @@ function Skills({}: SkillsProps) {
                 </Text>
                 <Stack spaceY={"1rem"} as="ul">
                   {items.map(({ title }, index) => (
-                    <Text key={index} style={{ marginLeft: "1.25rem" }} as="li">
-                      {title}
-                    </Text>
+                    <Stack
+                      as="li"
+                      direction="row"
+                      alignItems="center"
+                      spaceX={"0.5rem"}
+                    >
+                      <TechStackIcon name={title as TechStackName} />
+                      <Text key={index}>{title}</Text>
+                    </Stack>
                   ))}
                 </Stack>
               </Stack>
