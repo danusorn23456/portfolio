@@ -1,5 +1,6 @@
 import { DeviceObject, DeviceType, device } from "~/theme";
 export type CSSBuilderPropertie = string;
+//@ts-ignore
 export type CSSBuilderValue<T = any> =
   | string
   | number
