@@ -38,13 +38,14 @@ function Skills({}: SkillsProps) {
                 <Stack spaceY={"1rem"} as="ul">
                   {items.map(({ title }, index) => (
                     <Stack
+                      key={index}
                       as="li"
                       direction="row"
                       alignItems="center"
                       spaceX={"0.5rem"}
                     >
                       <TechStackIcon name={title as TechStackName} />
-                      <Text key={index}>{title}</Text>
+                      <Text>{title}</Text>
                     </Stack>
                   ))}
                 </Stack>
