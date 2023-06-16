@@ -1,9 +1,10 @@
 import { DeviceObject, DeviceType, device } from "~/theme";
 export type CSSBuilderPropertie = string;
-export type CSSBuilderValue =
+export type CSSBuilderValue<T = any> =
   | string
-  | DeviceObject
   | number
+  | CSSBuilderPropertie
+  | DeviceObject
   | undefined
   | null
   | boolean;
