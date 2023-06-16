@@ -213,7 +213,7 @@ function App() {
                     onClick={() => setSelectedProject(project)}
                   >
                     <Image
-                      ratio={"1/1"}
+                      ratio={"9/16"}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       src={project.imageSrc}

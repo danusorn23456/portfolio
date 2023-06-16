@@ -9,6 +9,12 @@ export type SizingProperties = {
   maxHeight?: CSSProperties["maxHeight"];
 };
 
+export type ImageProperties = {
+  ratio?: CSSProperties["aspectRatio"];
+  fit?: CSSProperties["objectFit"];
+  objectPosition?: CSSProperties["objectPosition"];
+};
+
 export type BackgroundProperties = {
   background?: CSSProperties["background"];
   backdropFilter?: CSSProperties["backdropFilter"];
