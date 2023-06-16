@@ -61,9 +61,8 @@ function Projects({}: ProjectsProps) {
           </Stack>
           <Grid gap="auto" cols={{ mobile: 1, tablet: 2 }}>
             {projects.map((project, index) => (
-              <Stack>
+              <Stack key={index}>
                 <MotionCard
-                  key={index}
                   cursor="pointer"
                   position={"relative"}
                   padding={0}
