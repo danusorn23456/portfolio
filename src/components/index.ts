@@ -10,3 +10,4 @@ export * from "./overlay";
 export * from "./box";
 export * from "./tag";
 export * from "./dark-mode-toggle";
+export * from "./tech-stack-icon";
