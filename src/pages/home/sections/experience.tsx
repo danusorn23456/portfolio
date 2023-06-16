@@ -29,8 +29,11 @@ function Experience({}: ExperienceProps) {
               whileInView="visible"
               viewport={{ once: true }}
               variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{
+                delay: 0.1,
               }}
               spaceY={"0.5rem"}
             >
