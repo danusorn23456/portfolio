@@ -13,18 +13,17 @@ const Container = styled(Box)<ContainerProps>`
   width: 100%;
   padding: ${({ noPad }) => (noPad ? 0 : "0 22px 0 22px")};
   margin: 0 auto;
-  ${(p) =>
-    mediaCSSBuilder([
-      [
-        "max-width",
-        {
-          mobile: "100%",
-          tablet: size.laptop,
-          laptop: size.desktop,
-        },
-        (v) => v,
-      ],
-    ])}
+  ${mediaCSSBuilder([
+    [
+      "max-width",
+      {
+        mobile: "100%",
+        tablet: size.laptop,
+        laptop: size.desktop,
+      },
+      (v) => v,
+    ],
+  ])}
 `;
 
 export { Container };
