@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 import { TextProperties, TextVariant } from "~/type";
 import { CSSBuilderValue, mediaCSSBuilder } from "~/utils";
@@ -7,21 +6,34 @@ export interface TextProps extends TextProperties {}
 
 const fontSizeMap: Record<TextVariant, CSSBuilderValue> = {
   h1: {
-    mobile: "2.5rem",
-    tablet: "2.25rem",
+    mobile: "1.4rem",
+    laptop: "1.8rem",
   },
   h2: {
-    mobile: "2.25rem",
-    tablet: "2rem",
+    mobile: "1.4rem",
+    laptop: "1.6rem",
   },
   h3: {
-    mobile: "2rem",
-    tablet: "1.75rem",
+    mobile: "1.125rem",
+    laptop: "1.2rem",
+  },
+  h4: {
+    mobile: "1rem",
+    laptop: "1.2rem",
   },
   p: {
-    mobile: "1rem",
-    tablet: "0.875rem",
+    mobile: "0.875rem",
+    laptop: "1rem",
   },
+  label: {
+    mobile: "0.875rem",
+    laptop: "0.875rem",
+  },
+  a: {
+    mobile: "0.8rem",
+    laptop: "1rem",
+  },
+  span: "inherit",
 };
 
 const Text = styled.p<TextProps>`
@@ -31,6 +43,14 @@ const Text = styled.p<TextProps>`
     mediaCSSBuilder([
       ["text-align", p.textAlign || "left", (v) => v],
       ["font-size", p.fontSize || fontSizeMap[p.variant || "p"], (v) => v],
+      [
+        "font-weight",
+        p.weight ||
+        ["h1", "h2", "h3", "h4", "a"].some((predict) => predict === p.variant)
+          ? "bold"
+          : "normal",
+        (v) => v,
+      ],
     ])}
 
   ${(p) =>
