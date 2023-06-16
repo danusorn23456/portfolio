@@ -1,6 +1,8 @@
 :root {
   --scroll-width:12px;
-  --white: #FFFFFF;
+  --white-fade: #FFFFFF7e;
+  --black-fade: #0000007e;
+  --white: #ffffff;
   --black: #000000;
   --primary-darker: #DC5000;
   --primary-dark: #F55900;
@@ -43,11 +45,29 @@
   --negative-light: #D34B4B;
   --negative-lighter: #D85F5F;
 }
-     
+.dark-mode  *{
+  --white:#000000;
+  --black:#FFFFFF;
+  --white-fade: #0000007e;
+  --black-fade: #FFFFFF7e;
+  --surface-darker:#1F1F1F;
+  --surface-dark:#1F1F1F;
+  --surface-base:#454545;
+  --surface-light:#5F5F5F;
+  --surface-lighter:#6B6B6B;
+  --background-darker:#9C9C9C;
+  --background-dark:#9C9C9C;
+  --background-base:#C2C2C2;
+  --background-light:#DBDBDB;
+  --background-lighter:#E8E8E8;
+}
+
 @media (prefers-color-scheme: dark){
  :root{
    --white:#000000;
    --black:#FFFFFF;
+   --white-fade: #0000007e;
+   --black-fade: #FFFFFF7e;
    --surface-darker:#1F1F1F;
    --surface-dark:#1F1F1F;
    --surface-base:#454545;
