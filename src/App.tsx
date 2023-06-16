@@ -60,6 +60,10 @@ function AnimatedSVG() {
   );
 }
 
+const MotionCard = motion(Card);
+const MotionStack = motion(Stack);
+const MotionImage = motion(Image);
+
 function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>();
   const gradienVar = ["var(--primary-base) 0%", "var(--secondary-base) 50%"];
@@ -169,7 +173,7 @@ function App() {
                 experience
               </Text>
               {experience.map((exp, index) => (
-                <Stack
+                <MotionStack
                   key={index}
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -193,7 +197,7 @@ function App() {
                       <Text>{exp.description}</Text>
                     </Stack>
                   </Card>
-                </Stack>
+                </MotionStack>
               ))}
             </Stack>
           </Container>
@@ -202,17 +206,17 @@ function App() {
           <Container>
             <Stack spaceY={"auto"}>
               <Text variant="h2" as={"h2"} gradient={gradienVar}>
-                my favorite project
+                Projects
               </Text>
               <Grid gap="auto" cols={{ mobile: 2, laptop: 3 }}>
                 {projects.map((project, index) => (
-                  <Card
+                  <MotionCard
                     borderless
                     key={index}
                     layoutId={`${project.name}`}
                     onClick={() => setSelectedProject(project)}
                   >
-                    <Image
+                    <MotionImage
                       ratio={"9/16"}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -221,7 +225,7 @@ function App() {
                     <Stack>
                       <Text as="h3">{project.name}</Text>
                     </Stack>
-                  </Card>
+                  </MotionCard>
                 ))}
               </Grid>
             </Stack>

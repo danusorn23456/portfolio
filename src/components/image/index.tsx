@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 import { ImageProperties, SizingProperties } from "~/type";
 import { mediaCSSBuilder } from "~/utils";
 
 export interface ImageProps extends SizingProperties, ImageProperties {}
 
-const Image = styled(motion.img)<ImageProps>`
+const Image = styled.img<ImageProps>`
   display: block;
   ${(p) =>
     mediaCSSBuilder([
+      ["filter", `grayscale(${p.grayscale})`, (v) => v],
       ["min-width", p.minWidth, (v) => v],
       ["width", p.width || "100%", (v) => v],
       ["max-width", p.maxWidth, (v) => v],

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 import { BackgroundProperties, EdgeProperties, SizingProperties } from "~/type";
 import { mediaCSSBuilder } from "~/utils";
@@ -8,7 +7,7 @@ export interface CardProps
     BackgroundProperties,
     EdgeProperties {}
 
-const Card = styled(motion.div)<CardProps>`
+const Card = styled.div<CardProps>`
   ${(p) =>
     mediaCSSBuilder([
       ["min-width", p.minWidth, (v) => v],

@@ -10,6 +10,7 @@ export type SizingProperties = {
 };
 
 export type ImageProperties = {
+  grayscale?: string;
   ratio?: CSSProperties["aspectRatio"];
   fit?: CSSProperties["objectFit"];
   objectPosition?: CSSProperties["objectPosition"];

@@ -24,7 +24,7 @@ const fontSizeMap: Record<TextVariant, CSSBuilderValue> = {
   },
 };
 
-const Text = styled(motion.p)<TextProps>`
+const Text = styled.p<TextProps>`
   width: fit-content;
   line-height: 140%;
   ${(p) =>

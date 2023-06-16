@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled, { CSSProperties } from "styled-components";
 import { DeviceObject } from "~/theme";
 import { SizingProperties, SpacingProperties } from "~/type";
@@ -12,7 +11,7 @@ export interface StackProps extends SizingProperties, SpacingProperties {
   direction?: "row" | "column" | DeviceObject<"row" | "column">;
 }
 
-const Stack = styled(motion.div)<StackProps>`
+const Stack = styled.div<StackProps>`
   display: flex;
   ${(p) =>
     mediaCSSBuilder([
