@@ -16,6 +16,16 @@ export type CSSBuilderArray = [
   CSSBuilderTransformValue
 ][];
 
+function maybePxUnit(key: string, value: any) {
+  if (
+    typeof value === "number" &&
+    ["opacity", "z-index"].every((predict) => key !== predict)
+  ) {
+    return `${value}px`;
+  }
+  return value;
+}
+
 function mediaCSSBuilder(cssArray: CSSBuilderArray) {
   let cssString = "";
 
@@ -26,9 +36,7 @@ function mediaCSSBuilder(cssArray: CSSBuilderArray) {
 
     if (typeof cssValue !== "object") {
       let simplifyValue = cssTransformValue(cssValue);
-      if (typeof simplifyValue === "number") {
-        simplifyValue = `${simplifyValue}px`;
-      }
+      simplifyValue = maybePxUnit(cssPropertie, simplifyValue);
       if (!simplifyValue) continue;
       cssString += `${cssPropertie}: ${simplifyValue};\n`;
     } else if (typeof cssValue === "object") {
@@ -39,9 +47,7 @@ function mediaCSSBuilder(cssArray: CSSBuilderArray) {
         let simplifyValue = cssTransformValue(valueOfDeviceName);
         if (!simplifyValue) continue;
 
-        if (typeof simplifyValue === "number") {
-          simplifyValue = `${simplifyValue}px`;
-        }
+        simplifyValue = maybePxUnit(cssPropertie, simplifyValue);
 
         cssString += `@media${device[_deviceType]}{\n${cssPropertie}: ${simplifyValue};\n}\n`;
       }
