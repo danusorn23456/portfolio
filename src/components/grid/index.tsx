@@ -20,7 +20,7 @@ const Grid = styled.div<GridProps>`
     ])}
   ${(p) =>
     mediaCSSBuilder([
-      ["gap", p.gap, (v) => v === "auto" && "2rem"],
+      ["gap", p.gap === "auto" && "2rem", (v) => v],
       ["grid-template-columns", p.cols, (v) => `repeat(${v},1fr)`],
     ])}
 `;
