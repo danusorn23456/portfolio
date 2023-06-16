@@ -9,7 +9,15 @@ export interface CardProps
     EdgeProperties {}
 
 const Card = styled(motion.div)<CardProps>`
-  ${(p) => mediaCSSBuilder([["width", p.width, (v) => v]])}
+  ${(p) =>
+    mediaCSSBuilder([
+      ["min-width", p.minWidth, (v) => v],
+      ["width", p.width, (v) => v],
+      ["max-width", p.maxWidth, (v) => v],
+      ["min-height", p.minHeight, (v) => v],
+      ["height", p.height, (v) => v],
+      ["max-height", p.maxHeight, (v) => v],
+    ])}
   ${(p) =>
     !p.borderless &&
     mediaCSSBuilder([
