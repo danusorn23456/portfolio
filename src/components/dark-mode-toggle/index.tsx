@@ -56,35 +56,32 @@ function DarkModeToggle({
   className = "dark-mode",
   defaultDark,
 }: DarkModeToggleProps) {
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const localKey = "dark-mode";
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    const localIsDarkMode = localStorage.getItem("dark-mode");
+    if (localIsDarkMode) {
+      return Boolean(Number(localIsDarkMode));
+    }
+    return Boolean(defaultDark);
+  });
+
   const containerRef = useRef<HTMLBodyElement>();
 
-  function updateIsDark() {
-    if (containerRef.current) {
-      const isDark = containerRef.current.className.includes(className);
-      setIsDark(isDark);
+  function updateClass() {
+    if (!containerRef.current) {
+      containerRef.current = document.getElementsByTagName("body")[0];
     }
+    containerRef.current.classList.toggle(className, isDark);
   }
 
-  function toggleMode(isDark?: boolean) {
-    if (!containerRef.current) {
-      const root = document.getElementsByTagName("body")[0];
-      if (!root) {
-        throw new Error("root element not found");
-      }
-      containerRef.current = root;
-    }
-    if (isDark) {
-      containerRef.current.classList.add(className);
-    } else {
-      containerRef.current.classList.toggle(className);
-    }
+  function toggleMode() {
+    setIsDark(!isDark);
   }
 
   useEffect(() => {
-    toggleMode(true);
-    updateIsDark();
-  }, [defaultDark]);
+    localStorage.setItem(localKey, isDark ? "1" : "0");
+    updateClass();
+  }, [isDark]);
 
   return (
     <Toggle.Root>
@@ -107,12 +104,7 @@ function DarkModeToggle({
           left: isDark ? "2.4rem" : 0,
         }}
       />
-      <Toggle.ClickableArea
-        onClick={() => {
-          toggleMode();
-          updateIsDark();
-        }}
-      />
+      <Toggle.ClickableArea onClick={toggleMode} />
     </Toggle.Root>
   );
 }
