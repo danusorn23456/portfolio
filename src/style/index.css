@@ -31,6 +31,7 @@ body,html,#root{
 }
 
 *{
+  transition: all 200ms;
   box-sizing: border-box;
 }
 
