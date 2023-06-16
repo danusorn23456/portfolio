@@ -12,9 +12,9 @@ const Card = styled(motion.div)<CardProps>`
   ${(p) =>
     mediaCSSBuilder([
       ["width", p.width, (v) => v],
-      ["border-width", p.borderWidth, (v) => v || "1px"],
-      ["border-color", p.borderColor, (v) => v || "white"],
-      ["border-style", p.borderStyle, (v) => v || "solid"],
+      ["border-width", p.borderWidth || (!p.borderless && "1px"), (v) => v],
+      ["border-color", p.borderColor || (!p.borderless && "white"), (v) => v],
+      ["border-style", p.borderStyle || (!p.borderless && "solid"), (v) => v],
     ])}
   padding: ${(p) => (p.borderless ? 0 : 0.875)}rem;
   border-radius: 0.375rem;

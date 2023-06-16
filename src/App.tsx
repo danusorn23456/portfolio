@@ -201,7 +201,7 @@ function App() {
         <Section name="project">
           <Container>
             <Stack spaceY={"auto"}>
-              <Text role="h2" as={"h2"} gradient={gradienVar}>
+              <Text variant="h2" as={"h2"} gradient={gradienVar}>
                 my favorite project
               </Text>
               <Grid gap="auto" cols={{ mobile: 2, laptop: 3 }}>
