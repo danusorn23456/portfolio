@@ -5,7 +5,8 @@ import { Box } from "../box";
 export interface PageProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Page = styled(Box)<PageProps>`
-  width: 100%;
+  width: 100vw;
+  background: var(--white);
 `;
 
 export { Page };
