@@ -1,9 +1,9 @@
-import { HTMLMotionProps, motion } from "framer-motion";
 import { CSSProperties, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
+import { Box } from "../box";
 
-export interface OverlayProps extends HTMLMotionProps<"div"> {
+export interface OverlayProps {
   key: string;
   zIndex?: CSSProperties["zIndex"];
   background?: CSSProperties["background"];
@@ -13,12 +13,12 @@ export interface OverlayProps extends HTMLMotionProps<"div"> {
   onClose?: () => any;
 }
 
-const StyledOverlay = styled(motion.div)<OverlayProps>`
+const StyledOverlay = styled(Box)<OverlayProps>`
   z-index: ${(p) => p.zIndex || "unset"};
   position: fixed;
   inset: 0;
   background: ${(p) =>
-    p.transparent ? "transparent" : p.background || "black"};
+    p.transparent ? "transparent" : p.background || "var(--white)"};
   display: flex;
   flex-direction: column;
   align-items: center;
