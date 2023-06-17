@@ -16,7 +16,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <Page>
       <Box
-        as={"nav"}
+        as={"header"}
         position="fixed"
         zIndex={1000}
         top={0}
@@ -28,7 +28,7 @@ function Layout({ children }: LayoutProps) {
           borderBottom: "1px solid var(--black-fade)",
         }}
       >
-        <Container>
+        <Container as="nav">
           <Stack
             direction="row"
             alignItems="center"
@@ -36,10 +36,11 @@ function Layout({ children }: LayoutProps) {
             padding="0.25rem"
           >
             <Text
+              as="h1"
               weight="bold"
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
-              GuitarTar Portfolio
+              Danusorn Portfolio
             </Text>
             <DarkModeToggle defaultDark={true} />
           </Stack>
