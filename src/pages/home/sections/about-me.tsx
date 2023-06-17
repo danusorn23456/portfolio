@@ -15,11 +15,11 @@ function AboutMe({}: AboutMeProps) {
         >
           <Stack>
             <Text
-              variant="h2"
+              variant="h1"
               as={"h2"}
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
-              Human, GUITAR
+              Hello it's me Danusorn
             </Text>
             <Text>
               i am a{" "}
