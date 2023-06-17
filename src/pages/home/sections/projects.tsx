@@ -1,15 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { MdPreview } from "react-icons/md";
+
 import {
-  Box,
   Card,
+  Tag,
   Container,
-  Grid,
   Image,
   Overlay,
   Section,
   Stack,
   Text,
+  Box,
 } from "~/components";
 import { ProjectItem, projects } from "~/data";
 
@@ -21,6 +23,24 @@ const MotionOverlay = motion(Overlay);
 
 function Projects({}: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>();
+
+  function linkRender(url: string) {
+    if (!url) {
+      return <Tag>not avialable</Tag>;
+    } else if (url === "@private") {
+      return <Tag>private</Tag>;
+    }
+    return (
+      <Tag style={{ position: "relative" }} maxWidth="300px">
+        {url}
+        <a
+          target="_blank"
+          href={url}
+          style={{ position: "absolute", inset: 0 }}
+        ></a>
+      </Tag>
+    );
+  }
 
   function clearSelectedProject() {
     setSelectedProject(null);
@@ -36,26 +56,17 @@ function Projects({}: ProjectsProps) {
             escapeToClose={true}
             onClose={clearSelectedProject}
             layoutId={`${selectedProject.name}`}
+            transparent
+            backdropFilter="blur(2px)"
           >
-            <Container>
-              <Stack
-                align="center"
-                justifyContent="center"
-                spaceY={"auto"}
-                height="100vh"
-              >
-                <Image
-                  ratio="1/1"
-                  fit="contain"
-                  style={{ margin: "0 auto" }}
-                  maxWidth={"600px"}
-                  src={selectedProject.gif}
-                />
-                <Box>
-                  <Text>{selectedProject.paragraph}</Text>
-                </Box>
-              </Stack>
-            </Container>
+            <Stack height="100%" justifyContent="center" padding={"1rem"}>
+              <Image
+                maxHeight="600px"
+                fit="contain"
+                style={{ margin: "0 auto" }}
+                src={selectedProject.gif}
+              />
+            </Stack>
           </MotionOverlay>
         ) : (
           <></>
@@ -73,35 +84,93 @@ function Projects({}: ProjectsProps) {
               Projects
             </Text>
           </Stack>
-          <Grid gap="1rem" cols={{ mobile: 2, tablet: 4 }}>
+          <Stack spaceY={"2rem"}>
             {projects.map((project, index) => (
-              <Stack key={index}>
-                <MotionCard
-                  borderless
-                  cursor="pointer"
-                  position={"relative"}
-                  padding={0}
-                  layoutId={`${project.name}`}
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <MotionImage
-                    initial={"hidden"}
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={{
-                      hidden: { opacity: 0 },
-                      visible: { opacity: 1 },
-                    }}
-                    ratio={"2/3"}
-                    src={project.gif}
-                  />
-                </MotionCard>
-                <Text variant="h3" as="h3" color="var(--black)" zIndex={10}>
-                  {project.name}
-                </Text>
+              <Stack
+                key={index}
+                direction={{ mobile: "column", laptop: "row" }}
+                spaceY={{ mobile: "1rem", laptop: 0 }}
+                spaceX={"1rem"}
+              >
+                <Box flex={1}>
+                  <MotionCard
+                    borderless
+                    cursor="pointer"
+                    position={"relative"}
+                    padding={0}
+                    layoutId={`${project.name}`}
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    <MotionImage
+                      initial={"hidden"}
+                      whileHover={"visible"}
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: { opacity: 1 },
+                      }}
+                      ratio={"16/9"}
+                      src={project.gif}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        right: 0,
+                        opacity: 0.5,
+                        padding: "0.5rem",
+                        color: "var(--black)",
+                      }}
+                    >
+                      click to view gif
+                    </div>
+                  </MotionCard>
+                </Box>
+                <Stack flex={1}>
+                  <Text
+                    variant="h3"
+                    as="h3"
+                    zIndex={10}
+                    gradient={["var(--primary-base)", "var(--secondary-base)"]}
+                  >
+                    {project.name}
+                  </Text>
+                  <Text>{project.paragraph}</Text>
+                  <Stack spaceY={"0.5rem"}>
+                    <Stack direction="row">
+                      <Text
+                        width="50px"
+                        weight="bold"
+                        gradient={[
+                          "var(--primary-base)",
+                          "var(--secondary-base)",
+                        ]}
+                      >
+                        site
+                      </Text>
+                      <Text padding="0 0.5rem">:</Text>
+                      {linkRender(project.site)}
+                    </Stack>
+                    <Stack direction="row">
+                      <Text
+                        width="50px"
+                        weight="bold"
+                        gradient={[
+                          "var(--primary-base)",
+                          "var(--secondary-base)",
+                        ]}
+                      >
+                        repo
+                      </Text>
+                      <Text padding="0 0.5rem">:</Text>
+                      {linkRender(project.repo)}
+                    </Stack>
+                  </Stack>
+                </Stack>
               </Stack>
             ))}
-          </Grid>
+          </Stack>
         </Stack>
       </Container>
     </Section>
