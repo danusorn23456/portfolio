@@ -1,4 +1,5 @@
-import { Container, Section, Stack, Text } from "~/components";
+import { Card, Container, Image, Section, Stack, Text } from "~/components";
+import guitarImage from "../../../assets/guitar.jpeg";
 
 export interface AboutMeProps {}
 
@@ -8,7 +9,7 @@ function AboutMe({}: AboutMeProps) {
       <Container>
         <Stack
           height={"100vh"}
-          direction={{ mobile: "column", tablet: "row" }}
+          direction={{ mobile: "column-reverse", tablet: "row" }}
           alignItems={{ tablet: "center" }}
           justifyContent={{ mobile: "center", tablet: "flex-start" }}
         >
@@ -42,6 +43,11 @@ function AboutMe({}: AboutMeProps) {
                 actively engaged throughout the day.
               </Text>
             </Text>
+          </Stack>
+          <Stack alignItems="center" justifyContent="center" flex={1}>
+            <Card padding={0}>
+              <Image maxWidth="300px" src={guitarImage} />
+            </Card>
           </Stack>
         </Stack>
       </Container>
