@@ -32,6 +32,7 @@ const Tag = styled(Box)<TagProps>`
   ${(p) => mediaCSSBuilder([["width", p.width || "fit-content", (v) => v]])}
   transition: all 100ms;
   color: var(--black);
+  font-weight: normal;
   list-style: none;
   overflow: hidden;
   text-overflow: ellipsis;
