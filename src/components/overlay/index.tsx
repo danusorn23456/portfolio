@@ -1,12 +1,12 @@
-import { CSSProperties, forwardRef, useEffect } from "react";
+import { forwardRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 import { Box } from "../box";
+import { BackgroundProperties, PositionProperties } from "~/type";
+import { mediaCSSBuilder } from "~/utils";
 
-export interface OverlayProps {
+export interface OverlayProps extends BackgroundProperties, PositionProperties {
   key: string;
-  zIndex?: CSSProperties["zIndex"];
-  background?: CSSProperties["background"];
   transparent?: boolean;
   clickToClose?: boolean;
   escapeToClose?: boolean;
@@ -14,17 +14,23 @@ export interface OverlayProps {
 }
 
 const StyledOverlay = styled(Box)<OverlayProps>`
-  z-index: ${(p) => p.zIndex || 1100};
+  ${(p) =>
+    mediaCSSBuilder([
+      ["z-index", p.zIndex || 1100, (v) => v],
+      [
+        "background",
+        p.transparent ? "transparent" : p.background || "var(--white)",
+        (v) => v,
+      ],
+      ["backdrop-filter", p.backdropFilter, (v) => v],
+    ])}
   height: 100vh;
   overflow: auto;
   position: fixed;
   inset: 0;
-  background: ${(p) =>
-    p.transparent ? "transparent" : p.background || "var(--white)"};
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: ${(p) => (p.transparent ? "none" : "auto")};
 `;
 
 const Overlay = forwardRef<HTMLDivElement, OverlayProps>(
