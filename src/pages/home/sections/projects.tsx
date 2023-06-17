@@ -47,30 +47,27 @@ function Projects({}: ProjectsProps) {
 
   return (
     <Section name="project">
-      <AnimatePresence presenceAffectsLayout={false}>
-        {selectedProject ? (
-          <MotionOverlay
-            key={selectedProject.name}
-            clickToClose={true}
-            escapeToClose={true}
-            onClose={clearSelectedProject}
-            layoutId={`${selectedProject.name}`}
-            transparent
-            backdropFilter="blur(2px)"
-          >
-            <Stack height="100%" justifyContent="center" padding={"1rem"}>
-              <Image
-                maxHeight="600px"
-                fit="contain"
-                style={{ margin: "0 auto" }}
-                src={selectedProject.gif}
-              />
-            </Stack>
-          </MotionOverlay>
-        ) : (
-          <></>
-        )}
-      </AnimatePresence>
+      {selectedProject ? (
+        <MotionOverlay
+          key={selectedProject.name}
+          clickToClose={true}
+          escapeToClose={true}
+          onClose={clearSelectedProject}
+          transparent
+          backdropFilter="blur(2px)"
+        >
+          <Stack height="100%" justifyContent="center" padding={"1rem"}>
+            <Image
+              maxHeight="600px"
+              fit="contain"
+              style={{ margin: "0 auto" }}
+              src={selectedProject.gif}
+            />
+          </Stack>
+        </MotionOverlay>
+      ) : (
+        <></>
+      )}
       <Container>
         <Stack spaceY={"auto"}>
           <Stack direction={"row"} spaceX={"0.5rem"}>
@@ -115,11 +112,13 @@ function Projects({}: ProjectsProps) {
                     <div
                       style={{
                         position: "absolute",
-                        bottom: 0,
-                        right: 0,
+                        bottom: 4,
+                        right: 4,
                         opacity: 0.5,
-                        padding: "0.5rem",
+                        padding: "0 0.5rem",
                         color: "var(--black)",
+                        background: "var(--white)",
+                        borderRadius: "1rem",
                       }}
                     >
                       click to view gif
