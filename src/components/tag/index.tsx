@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { SizeVariant, StatusVariant } from "~/type";
+import { Box } from "../box";
+import { mediaCSSBuilder } from "~/utils";
 
 export interface TagProps {
   size?: SizeVariant;
@@ -26,16 +28,23 @@ const statusColorMap = {
   notice: "var(--notice-base)",
 };
 
-const Tag = styled.div<TagProps>`
+const Tag = styled(Box)<TagProps>`
+  ${(p) => mediaCSSBuilder([["width", p.width || "fit-content", (v) => v]])}
+  transition: all 100ms;
   color: var(--black);
   list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  width: fit-content;
   border: 1px solid;
   border-radius: 100px;
   font-size: ${({ size }) => fontSizeMap[size || "md"]};
   border-color: ${({ status }) => statusColorMap[status || "normal"]};
   padding: ${({ size }) => paddingSizeMap[size || "md"]};
+  &:hover {
+    color: var(--white);
+    background-color: var(--black);
+  }
 `;
 
 export { Tag };
