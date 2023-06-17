@@ -38,7 +38,7 @@ function Projects({}: ProjectsProps) {
           >
             <Container>
               <Stack align="center" spaceY={"auto"}>
-                <Image maxWidth={"300px"} src={selectedProject.imageSrc} />
+                <Image maxWidth={"300px"} src={selectedProject.gif} />
                 <Text>{selectedProject.paragraph}</Text>
               </Stack>
             </Container>
@@ -59,10 +59,11 @@ function Projects({}: ProjectsProps) {
               Projects
             </Text>
           </Stack>
-          <Grid gap="auto" cols={{ mobile: 1, tablet: 2 }}>
+          <Grid gap="1rem" cols={{ mobile: 2, tablet: 4 }}>
             {projects.map((project, index) => (
               <Stack key={index}>
                 <MotionCard
+                  borderless
                   cursor="pointer"
                   position={"relative"}
                   padding={0}
@@ -77,8 +78,8 @@ function Projects({}: ProjectsProps) {
                       hidden: { opacity: 0 },
                       visible: { opacity: 1 },
                     }}
-                    ratio={"16/9"}
-                    src={project.imageSrc}
+                    ratio={"2/3"}
+                    src={project.gif}
                   />
                 </MotionCard>
                 <Text variant="h3" as="h3" color="var(--black)" zIndex={10}>
