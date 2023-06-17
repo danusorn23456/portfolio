@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import {
+  Box,
   Card,
   Container,
   Grid,
@@ -37,9 +38,22 @@ function Projects({}: ProjectsProps) {
             layoutId={`${selectedProject.name}`}
           >
             <Container>
-              <Stack align="center" spaceY={"auto"}>
-                <Image maxWidth={"300px"} src={selectedProject.gif} />
-                <Text>{selectedProject.paragraph}</Text>
+              <Stack
+                align="center"
+                justifyContent="center"
+                spaceY={"auto"}
+                height="100vh"
+              >
+                <Image
+                  ratio="1/1"
+                  fit="contain"
+                  style={{ margin: "0 auto" }}
+                  maxWidth={"600px"}
+                  src={selectedProject.gif}
+                />
+                <Box>
+                  <Text>{selectedProject.paragraph}</Text>
+                </Box>
               </Stack>
             </Container>
           </MotionOverlay>
