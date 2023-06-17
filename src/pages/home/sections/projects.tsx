@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { MdPreview } from "react-icons/md";
 
 import {
   Card,
