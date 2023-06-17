@@ -38,7 +38,7 @@ function Layout({ children }: LayoutProps) {
               weight="bold"
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
-              Human Tar
+              GuitarTar Portfolio
             </Text>
             <DarkModeToggle defaultDark={true} />
           </Stack>
