@@ -41,10 +41,7 @@ const Tag = styled(Box)<TagProps>`
   font-size: ${({ size }) => fontSizeMap[size || "md"]};
   border-color: ${({ status }) => statusColorMap[status || "normal"]};
   padding: ${({ size }) => paddingSizeMap[size || "md"]};
-  &:hover {
-    color: var(--white);
-    background-color: var(--black);
-  }
+  user-select: none;
 `;
 
 export { Tag };
