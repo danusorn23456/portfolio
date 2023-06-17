@@ -38,10 +38,10 @@ const fontSizeMap: Record<TextVariant, CSSBuilderValue> = {
 };
 
 const Text = styled(Box)<TextProps>`
-  width: fit-content;
   line-height: 140%;
   ${(p) =>
     mediaCSSBuilder([
+      ["width", p.width || "fit-content", (v) => v],
       ["color", p.color || "var(--black)", (v) => v],
       ["text-align", p.textAlign || "left", (v) => v],
       ["font-size", p.fontSize || fontSizeMap[p.variant || "p"], (v) => v],
