@@ -16,7 +16,7 @@ function Experience({}: ExperienceProps) {
             <Text
               id="section-experience"
               variant="h2"
-              as={"a"}
+              as={"h2"}
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
               Experience<Text>about 2 year</Text>
@@ -48,7 +48,7 @@ function Experience({}: ExperienceProps) {
                   <Stack>
                     <Text
                       variant="h3"
-                      as="h2"
+                      as="h3"
                       gradient={[
                         "var(--primary-base)",
                         "var(--secondary-base)",
@@ -56,16 +56,18 @@ function Experience({}: ExperienceProps) {
                     >
                       {exp.company}
                     </Text>
-                    <Text weight={"bold"}>{exp.role}</Text>
+                    <Text as="h3" weight={"bold"}>
+                      {exp.role}
+                    </Text>
                   </Stack>
-                  <Text>{exp.description}</Text>
+                  <Text as="p">{exp.description}</Text>
                   <Text variant="label" weight="bold">
                     keywords
                   </Text>
                   <Stack as="ul" flexWrap={"wrap"} direction={"row"}>
                     {exp.tag.map((tag, index) => (
-                      <Box key={index} padding={"0.15rem"}>
-                        <Tag as="li">{tag}</Tag>
+                      <Box as="li" key={index} padding={"0.15rem"}>
+                        <Tag as="h4">{tag}</Tag>
                       </Box>
                     ))}
                   </Stack>

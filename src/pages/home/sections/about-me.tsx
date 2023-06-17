@@ -13,7 +13,7 @@ function AboutMe({}: AboutMeProps) {
           alignItems={{ tablet: "center" }}
           justifyContent={{ mobile: "center", tablet: "flex-start" }}
         >
-          <Stack>
+          <Stack as={"header"}>
             <Text
               variant="h1"
               as={"h2"}
@@ -21,7 +21,7 @@ function AboutMe({}: AboutMeProps) {
             >
               Hello it's me Danusorn
             </Text>
-            <Text>
+            <Text as="h1">
               i am a{" "}
               <Text
                 as="span"
@@ -33,7 +33,8 @@ function AboutMe({}: AboutMeProps) {
               <br />
               creating and maintaining exceptional web interfaces
               <br />
-              love to sharing my knowledge of web technologies with others
+              love to coding and sharing my knowledge of web technologies with
+              others
               <br />
               and als{" "}
               <Text

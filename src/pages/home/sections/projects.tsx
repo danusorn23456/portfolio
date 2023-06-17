@@ -74,7 +74,7 @@ function Projects({}: ProjectsProps) {
             <Text
               id="section-project"
               variant="h2"
-              as="a"
+              as="h2"
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
               Projects
@@ -87,8 +87,9 @@ function Projects({}: ProjectsProps) {
                 direction={{ mobile: "column", laptop: "row" }}
                 spaceY={{ mobile: "1rem", laptop: 0 }}
                 spaceX={"1rem"}
+                as="article"
               >
-                <Box flex={1}>
+                <Box flex={1} as="header">
                   <MotionCard
                     borderless
                     cursor="pointer"
@@ -108,6 +109,7 @@ function Projects({}: ProjectsProps) {
                       }}
                       ratio={"16/9"}
                       src={project.gif}
+                      alt={project.name}
                     />
                     <div
                       style={{
@@ -124,17 +126,20 @@ function Projects({}: ProjectsProps) {
                       click to view gif
                     </div>
                   </MotionCard>
+                  <Text variant="h3" as="h1" hidden>
+                    {project.name}
+                  </Text>
                 </Box>
                 <Stack flex={1}>
                   <Text
                     variant="h3"
-                    as="h3"
+                    as="span"
                     zIndex={10}
                     gradient={["var(--primary-base)", "var(--secondary-base)"]}
                   >
                     {project.name}
                   </Text>
-                  <Text>{project.paragraph}</Text>
+                  <Text as="p">{project.paragraph}</Text>
                   <Stack spaceY={"0.5rem"}>
                     <Stack direction="row">
                       <Text

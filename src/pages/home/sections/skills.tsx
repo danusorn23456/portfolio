@@ -58,7 +58,7 @@ function Skills({}: SkillsProps) {
                       }}
                     >
                       <TechStackIcon name={title as TechStackName} />
-                      <Text>{title}</Text>
+                      <Text as="h4">{title}</Text>
                     </MotionStack>
                   ))}
                 </Stack>

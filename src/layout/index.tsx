@@ -16,7 +16,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <Page>
       <Box
-        as={"header"}
+        as={"nav"}
         position="fixed"
         zIndex={1000}
         top={0}
@@ -28,7 +28,7 @@ function Layout({ children }: LayoutProps) {
           borderBottom: "1px solid var(--black-fade)",
         }}
       >
-        <Container as="nav">
+        <Container>
           <Stack
             direction="row"
             alignItems="center"
@@ -36,7 +36,7 @@ function Layout({ children }: LayoutProps) {
             padding="0.25rem"
           >
             <Text
-              as="h1"
+              as="h2"
               weight="bold"
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
