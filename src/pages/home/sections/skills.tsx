@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Container,
   Grid,
@@ -10,6 +11,8 @@ import {
 import { skills } from "~/data";
 
 export interface SkillsProps {}
+
+const MotionStack = motion(Stack);
 
 function Skills({}: SkillsProps) {
   return (
@@ -37,16 +40,26 @@ function Skills({}: SkillsProps) {
                 </Text>
                 <Stack spaceY={"1rem"} as="ul">
                   {items.map(({ title }, index) => (
-                    <Stack
+                    <MotionStack
                       key={index}
                       as="li"
                       direction="row"
                       alignItems="center"
                       spaceX={"0.5rem"}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={{
+                        hidden: { x: 50, opacity: 0 },
+                        visible: { x: 0, opacity: 100 },
+                      }}
+                      transition={{
+                        delay: 0.1,
+                      }}
                     >
                       <TechStackIcon name={title as TechStackName} />
                       <Text>{title}</Text>
-                    </Stack>
+                    </MotionStack>
                   ))}
                 </Stack>
               </Stack>
