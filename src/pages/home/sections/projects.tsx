@@ -25,7 +25,7 @@ function Projects({}: ProjectsProps) {
 
   function linkRender(url: string) {
     if (!url) {
-      return <Tag>not avialable</Tag>;
+      return <Tag>not available</Tag>;
     } else if (url === "@private") {
       return <Tag>private</Tag>;
     }
