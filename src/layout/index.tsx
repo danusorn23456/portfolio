@@ -16,6 +16,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <Page>
       <Box
+        as={"nav"}
         position="fixed"
         zIndex={1000}
         top={0}
