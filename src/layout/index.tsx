@@ -46,7 +46,7 @@ function Layout({ children }: LayoutProps) {
           </Stack>
         </Container>
       </Box>
-      <Stack padding="0 0 33vh 0">{children}</Stack>
+      <Stack padding="1rem 0 33vh 0">{children}</Stack>
     </Page>
   );
 }
