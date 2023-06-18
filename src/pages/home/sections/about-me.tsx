@@ -9,14 +9,35 @@ import {
 } from "~/components";
 import guitarImage from "../../../assets/guitar.jpeg";
 import { SiGmail, SiGithub } from "react-icons/si";
+import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import resumePDF from "../../../assets/resume.pdf";
 
 export interface AboutMeProps {}
 const MotionBox = motion(Box);
 function AboutMe({}: AboutMeProps) {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
+
+  async function downloadResume() {
+    // using Java Script method to get PDF file
+    await fetch(resumePDF).then((response) => {
+      const memoLinkId = "memo-link";
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let linkNode = document.getElementById(memoLinkId) as HTMLAnchorElement;
+        if (!linkNode) {
+          linkNode = document.createElement("a");
+          linkNode.id = "temp-link";
+          linkNode.style.display = "none";
+        }
+        linkNode.href = fileURL;
+        linkNode.download = "danusorn-resume.pdf";
+        linkNode.click();
+      });
+    });
+  }
 
   useEffect(() => {}, [isInView]);
 
@@ -101,12 +122,12 @@ function AboutMe({}: AboutMeProps) {
                 actively engaged throughout the day.
               </Text>
             </Text>
-            <Stack margin="2rem 0 0 0" as="address">
+            <Stack margin="1rem 0 0 0" as="address">
               <Text
                 as="p"
                 gradient={["var(--primary-base)", "var(--secondary-base)"]}
               >
-                meet me at
+                more info
               </Text>
               <Stack spaceY="0.5rem">
                 <Stack direction="row" spaceX="0.5rem">
@@ -145,6 +166,30 @@ function AboutMe({}: AboutMeProps) {
                   >
                     danusorn23456
                   </a>
+                </Stack>
+                <Stack direction="row" spaceX="0.5rem">
+                  <span
+                    style={{
+                      fontSize: "1rem",
+                      color: "var(--black)",
+                      translate: "0 2px",
+                    }}
+                  >
+                    <BsFillFileEarmarkPdfFill />
+                  </span>
+                  <button
+                    style={{
+                      fontSize: "1rem",
+                      color: "var(--black)",
+                      background: "none",
+                      outline: "none",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
+                    onClick={downloadResume}
+                  >
+                    download resume
+                  </button>
                 </Stack>
               </Stack>
             </Stack>
