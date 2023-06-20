@@ -21,7 +21,6 @@ function AboutMe({}: AboutMeProps) {
   const isInView = useInView(containerRef);
 
   async function downloadResume() {
-    // using Java Script method to get PDF file
     await fetch(resumePDF).then((response) => {
       const memoLinkId = "memo-link";
       response.blob().then((blob) => {
