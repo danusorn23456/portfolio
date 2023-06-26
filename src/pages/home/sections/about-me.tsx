@@ -9,7 +9,7 @@ import {
 } from "~/components";
 import guitarImage from "../../../assets/guitar.jpeg";
 import { SiGmail, SiGithub } from "react-icons/si";
-import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
+import { BsFillFileEarmarkPdfFill, BsFillTelephoneFill } from "react-icons/bs";
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import resumePDF from "../../../assets/resume.pdf";
@@ -129,6 +129,24 @@ function AboutMe({}: AboutMeProps) {
                 more info
               </Text>
               <Stack spaceY="0.5rem">
+                <Stack direction="row" spaceX="0.5rem">
+                  <span
+                    style={{
+                      fontSize: "1rem",
+                      color: "var(--black)",
+                      translate: "0 2px",
+                    }}
+                  >
+                    <BsFillTelephoneFill />
+                  </span>
+                  <a
+                    target="_blank"
+                    style={{ color: "var(--black)" }}
+                    href="tel:0925161598"
+                  >
+                    092 546 1598
+                  </a>
+                </Stack>
                 <Stack direction="row" spaceX="0.5rem">
                   <span
                     style={{
