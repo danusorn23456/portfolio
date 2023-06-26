@@ -142,9 +142,9 @@ function AboutMe({}: AboutMeProps) {
                   <a
                     target="_blank"
                     style={{ color: "var(--black)" }}
-                    href="tel:0925161598"
+                    href="tel:092-516-1598"
                   >
-                    092 546 1598
+                    092-546-1598
                   </a>
                 </Stack>
                 <Stack direction="row" spaceX="0.5rem">
