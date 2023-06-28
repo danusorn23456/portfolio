@@ -94,7 +94,7 @@ export const projects: ProjectItems = [
     paragraph:
       "A website for a group of friends in guild that is nothing more than just having fun.",
     repo: "https://github.com/danusorn23456/rotmg-god-slayer-web-app",
-    site: "rotmg-god-slayer-web-app.vercel.app",
+    site: "https://rotmg-god-slayer-web-app.vercel.app",
   },
   {
     name: "recoil todo list",
@@ -102,7 +102,7 @@ export const projects: ProjectItems = [
     paragraph:
       "Make a to do List using Recoil JS combined with data collection in localstorage",
     repo: "https://github.com/danusorn23456/react-recoil-todo-list",
-    site: "react-recoil-todo-list.vercel.app",
+    site: "https://react-recoil-todo-list.vercel.app",
   },
   {
     name: "base64 image upload",
