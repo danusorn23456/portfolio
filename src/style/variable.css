@@ -62,7 +62,7 @@
   --background-lighter:#E8E8E8;
 }
 
-@media (prefers-color-scheme: dark){
+/* @media (prefers-color-scheme: dark){
  :root{
    --white:#000000;
    --black:#FFFFFF;
@@ -79,5 +79,5 @@
    --background-light:#DBDBDB;
    --background-lighter:#E8E8E8;
   }
-}
+} */
      

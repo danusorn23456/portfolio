@@ -21,15 +21,6 @@ body,html,#root{
   overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 *{
   box-sizing: border-box;
 }
