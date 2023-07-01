@@ -43,6 +43,9 @@ export const skills: SkillItems = [
     category: "Animation",
     items: [
       {
+        title: "ThreeJS",
+      },
+      {
         title: "Framer Motion",
       },
       {

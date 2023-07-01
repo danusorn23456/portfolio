@@ -20,6 +20,7 @@ export type TechStackName =
   | "supabase"
   | "sass"
   | "tailwindcss"
+  | "threejs"
   | "trello"
   | "typescript"
   | "vercel";

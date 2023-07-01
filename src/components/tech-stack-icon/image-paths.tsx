@@ -20,6 +20,7 @@ import sass from "./assets/sass.png";
 import styledcomponent from "./assets/styledcomponent.png";
 import supabase from "./assets/supabase.png";
 import tailwindcss from "./assets/tailwindcss.png";
+import threejs from "./assets/threejs.png";
 import trello from "./assets/trello.png";
 import typescript from "./assets/typescript.png";
 import vercel from "./assets/vercel.png";
@@ -46,6 +47,7 @@ const imagesPaths: Record<TechStackName, string> = {
   sass,
   supabase,
   tailwindcss,
+  threejs,
   trello,
   typescript,
   vercel,
