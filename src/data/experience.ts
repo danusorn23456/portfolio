@@ -51,15 +51,6 @@ const experience: ExpereinceItems = [
     date: "Sep 2020 - Oct 2020",
     tag: ["responsive ui", "material ui", "google map"],
   },
-  {
-    company: "KillSwitch",
-    role: "frontend developer",
-    description: `
-    I'm making a responsive website page about cryptocurrencies with a focus on some entertaining UI animation. I enjoy fancy-looking websites.
-    `,
-    date: "May 2021",
-    tag: ["responsive ui"],
-  },
 ];
 
 export { experience };
