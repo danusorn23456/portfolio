@@ -86,13 +86,7 @@ export const skills: SkillItems = [
       },
       {
         title: "Firebase",
-      },
-      {
-        title: "Google",
-      },
-      {
-        title: "Ebay",
-      },
+      }
     ],
   },
   {
