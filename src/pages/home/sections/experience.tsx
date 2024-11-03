@@ -19,7 +19,7 @@ function Experience({}: ExperienceProps) {
               as={"h2"}
               gradient={["var(--primary-base)", "var(--secondary-base)"]}
             >
-              Experience<Text>about 2 year</Text>
+              Experience<Text>about 3 year</Text>
             </Text>
           </Stack>
           {experience.map((exp, index) => (

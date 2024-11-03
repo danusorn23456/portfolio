@@ -10,6 +10,20 @@ export type ExpereinceItems = ExpereinceItem[];
 
 const experience: ExpereinceItems = [
   {
+    company: "Nellika",
+    role: "frontend developer",
+    description: `create a user interface (UI) from a team of UI designers and discuss ideas or flow in a project. We plan the project using Jira software, create a multilingual website, integrate it with third parties like Facebook and Line, and release a mobile app on the store.`,
+    date: "Aug 2023 - now",
+    tag: [
+      "team communication",
+      "localization technique",
+      "grapql api",
+      "mobile app",
+      "deployment",
+      "jira task",
+    ],
+  },
+  {
     company: "QBox Point",
     role: "frontend developer",
     description: `create an interactive user interface for a web
