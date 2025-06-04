@@ -16,11 +16,11 @@ const experience: ExpereinceItems = [
     date: "Aug 2023 - now",
     tag: [
       "team communication",
-      "localization technique",
-      "grapql api",
+      "localization",
+      "graphql",
       "mobile app",
       "deployment",
-      "jira task",
+      "jira",
     ],
   },
   {
