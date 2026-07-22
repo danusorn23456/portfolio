@@ -1,0 +1,210 @@
+{
+    "profile": {
+        "name": "Danuson Cheounsanguan",
+        "age": 27,
+        "location": "Thailand",
+        "description": "Software Developer with 5+ years of experience building web and mobile applications with React, Next.js, Node.js, and Flutter. Experienced shipping products from initial development through production"
+    },
+    "contact": {
+        "phone": "+66 925 461 598",
+        "email": "danusorn23456@gmail.com",
+        "resume": "https://drive.google.com/file/d/1d9ZV9PZ2P5tKZTcRbE9w7G6WvUo9iK0M/view?usp=share_link"
+    },
+    "main_skills": [
+        "React.js",
+        "Next.js",
+        "Flutter",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "Firebase",
+        "Railway",
+        "Google Cloud Platform",
+        "App Store Connect",
+        "Google Play Console",
+        "Tailwind CSS"
+    ],
+    "skills": [
+        {
+            "category": "Languages & Frameworks",
+            "items": [
+                "JavaScript",
+                "TypeScript",
+                "React.js",
+                "Next.js",
+                "Node.js",
+                "Flutter"
+            ]
+        },
+        {
+            "category": "UI & Styling",
+            "items": [
+                "Tailwind CSS",
+                "Material UI",
+                "Mantine UI",
+                "Styled CSS"
+            ]
+        },
+        {
+            "category": "State Management",
+            "items": [
+                "Redux",
+                "Jotai"
+            ]
+        },
+        {
+            "category": "APIs & Data",
+            "items": [
+                "Apollo client",
+                "Axios",
+                "WebRTC",
+                "Socket.IO",
+                "D3.js",
+                "Google APIs",
+                "eBay API"
+            ]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "items": [
+                "Docker",
+                "Railway",
+                "Google Cloud Platform",
+                "Firebase",
+                "Google Play Console",
+                "App Store Connect"
+            ]
+        },
+        {
+            "category": "Tools & Collaboration",
+            "items": [
+                "Jira",
+                "ClickUp",
+                "Claude Code",
+                "i18n"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "Software Park Thailand",
+            "program": "Certificate of Completion, Code Camp",
+            "period": {
+                "end": "2021"
+            }
+        },
+        {
+            "school": "Visuttharangsi School",
+            "program": "High School Diploma",
+            "period": {
+                "end": "2017"
+            }
+        }
+    ],
+    "experience": [
+        {
+            "company": "Nellika",
+            "role": "Software Developer",
+            "period": {
+                "start": "Aug 2023",
+                "end": "Present"
+            },
+            "workType": "Remote",
+            "overview": "Software Developer working across web and mobile, with a growing focus on the bigger picture, such as business requirements, cross-team collaboration, and process improvements alongside hands-on coding.",
+            "keyContributions": [
+                "Took ownership of ambiguous goals, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
+                "Built and maintained core marketplace functionality including listings, search, filtering, sorting, and pagination used by buyers and sellers in production.",
+                "Built and maintained mental health mobile app, from initial build through release, including real-time Firebase push notifications to keep users engaged without manual follow-up.",
+                "Designed and implemented the complete authentication system, including email/password, Google Sign-In, Apple Sign-In, OTP verification, password recovery, and account linking.",
+                "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
+                "Picked up deployment and infrastructure workflows (Docker, Railway), including separate development, staging, and production branches with environment-specific configs.",
+                "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp.",
+                "Deployed mobile apps to the App Store and Google Play Console."
+            ],
+            "techStack": [
+                "React.js",
+                "Next.js",
+                "i18n",
+                "Flutter",
+                "Firebase",
+                "Railway",
+                "Apollo client",
+                "Claude Code",
+                "Socket.IO",
+                "Mantine UI",
+                "Axios",
+                "Google Play Console",
+                "App Store Connect"
+            ]
+        },
+        {
+            "company": "Personal Project",
+            "role": "Independent Developer",
+            "period": {
+                "start": "Jun 2022",
+                "end": "Aug 2023"
+            },
+            "countsTowardYears": false,
+            "overview": "Designed and developed a multi-listing application integrating the eBay API to automate bulk listing workflows for a family business, reducing repetitive manual work.",
+            "keyContributions": [
+                "Designed and built a multi-listing tool integrated with the eBay API.",
+                "Built the UI with React and Material UI for fast, simple bulk listing.",
+                "Owned the project end-to-end as a solo developer, from problem definition to implementation."
+            ],
+            "techStack": [
+                "React.js",
+                "eBay API",
+                "Material UI"
+            ]
+        },
+        {
+            "company": "QBox Point",
+            "role": "Frontend Developer",
+            "period": {
+                "start": "Jun 2021",
+                "end": "Jun 2022"
+            },
+            "workType": "Remote",
+            "overview": "Frontend Developer building a React-based CMS for a supply chain service, focused on data visualization, validation, and performance.",
+            "keyContributions": [
+                "Built visualization and validation features for a supply chain CMS using React and D3.js.",
+                "Improved application performance by optimizing client-side caching strategies.",
+                "Worked directly with clients through weekly meetings to gather requirements and report progress.",
+                "Supported urgent production deployments and critical fixes under tight deadlines."
+            ],
+            "techStack": [
+                "React.js",
+                "Next.js",
+                "Material UI",
+                "D3.js",
+                "Google APIs",
+                "Styled CSS",
+                "Axios",
+                "Jira",
+                "Google Meet"
+            ]
+        },
+        {
+            "company": "Buzzfreez Solution",
+            "role": "Frontend Developer",
+            "period": {
+                "start": "May 2021",
+                "end": "Nov 2021"
+            },
+            "workType": "Remote",
+            "overview": "Frontend Developer on a telemedicine app enabling remote video/voice consultations, in a small two-person dev team with direct client contact.",
+            "keyContributions": [
+                "Built the frontend of a telemedicine platform using Next.js.",
+                "Implemented real-time video and voice communication using WebRTC.",
+                "Communicated directly with clients to clarify requirements and gather feedback."
+            ],
+            "techStack": [
+                "React.js",
+                "Next.js",
+                "WebRTC",
+                "Socket.IO",
+                "Tailwind CSS"
+            ]
+        }
+    ]
+}
