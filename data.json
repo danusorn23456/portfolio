@@ -110,7 +110,7 @@
                 "end": "Present"
             },
             "workType": "Remote",
-            "overview": "Software Developer working across web and mobile, with a growing focus on the bigger picture, such as business requirements, cross-team collaboration, and process improvements alongside hands-on coding.",
+            "overview": "Software Developer working across web and mobile, with a growing focus on cross-team collaboration, technical feasibility, UI/UX discussions, and process improvements alongside hands-on coding.",
             "keyContributions": [
                 "Took ownership of ambiguous goals, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
                 "Built and maintained core marketplace functionality including listings, search, filtering, sorting, and pagination used by buyers and sellers in production.",
