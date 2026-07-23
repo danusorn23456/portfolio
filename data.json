@@ -117,9 +117,8 @@
                 "Built and maintained mental health mobile app, from initial build through release, including real-time Firebase push notifications to keep users engaged without manual follow-up.",
                 "Designed and implemented the complete authentication system, including email/password, Google Sign-In, Apple Sign-In, OTP verification, password recovery, and account linking.",
                 "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
-                "Picked up deployment and infrastructure workflows (Docker, Railway), including separate development, staging, and production branches with environment-specific configs.",
-                "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp.",
-                "Deployed mobile apps to the App Store and Google Play Console."
+                "Picked up deployment and infrastructure workflows (Docker, Railway), including separate development, staging, and production branches with environment-specific configs, and deployed mobile apps via App Store Connect and Google Play Console.",
+                "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp."
             ],
             "techStack": [
                 "React.js",
