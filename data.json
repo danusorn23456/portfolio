@@ -68,6 +68,7 @@
             "category": "Cloud & DevOps",
             "items": [
                 "Docker",
+                "GitHub Actions",
                 "Railway",
                 "Google Cloud Platform",
                 "Firebase",
@@ -117,7 +118,7 @@
                 "Built and maintained mental health mobile app, from initial build through release, including real-time Firebase push notifications to keep users engaged without manual follow-up.",
                 "Designed and implemented the complete authentication system, including email/password, Google Sign-In, Apple Sign-In, OTP verification, password recovery, and account linking.",
                 "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
-                "Picked up deployment and infrastructure workflows (Docker, Railway), including separate development, staging, and production branches with environment-specific configs, and deployed mobile apps via App Store Connect and Google Play Console.",
+                "Set up CI/CD pipelines with GitHub Actions and Railway auto-deploy across separate development, staging, and production branches with environment-specific configs, and deployed mobile apps via App Store Connect and Google Play Console.",
                 "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp."
             ],
             "techStack": [
@@ -126,6 +127,7 @@
                 "i18n",
                 "Flutter",
                 "Firebase",
+                "GitHub Actions",
                 "Railway",
                 "Apollo client",
                 "Claude Code",
