@@ -36,7 +36,9 @@ function parseMonthYear(value: string): Date | null {
   return new Date(Number(match[2]), monthIndex, 1);
 }
 
-export function totalExperienceYears(experience: PortfolioData["experience"]): number {
+export function totalExperienceYears(
+  experience: PortfolioData["experience"],
+): number {
   const starts = experience
     .filter((job) => job.countsTowardYears !== false)
     .map((job) => parseMonthYear(job.period.start))
@@ -46,6 +48,7 @@ export function totalExperienceYears(experience: PortfolioData["experience"]): n
   const earliest = starts.reduce((a, b) => (a < b ? a : b));
   const now = new Date();
   const months =
-    (now.getFullYear() - earliest.getFullYear()) * 12 + (now.getMonth() - earliest.getMonth());
+    (now.getFullYear() - earliest.getFullYear()) * 12 +
+    (now.getMonth() - earliest.getMonth());
   return Math.max(0, Math.floor(months / 12));
 }
