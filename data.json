@@ -58,6 +58,10 @@
       ]
     },
     {
+      "category": "Forms & Validation",
+      "items": ["React Hook Form", "Zod"]
+    },
+    {
       "category": "Cloud & DevOps",
       "items": [
         "Docker",
@@ -123,7 +127,9 @@
         "Mantine UI",
         "Axios",
         "Google Play Console",
-        "App Store Connect"
+        "App Store Connect",
+        "React Hook Form",
+        "Zod"
       ]
     },
     {
@@ -166,7 +172,8 @@
         "Styled CSS",
         "Axios",
         "Jira",
-        "Google Meet"
+        "Google Meet",
+        "React Hook Form"
       ]
     },
     {
