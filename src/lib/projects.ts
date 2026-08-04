@@ -4,6 +4,7 @@ import mindgym from "@/assets/friday.png";
 import ventureswap from "@/assets/ventureswap.png";
 import manta from "@/assets/manta.png"
 import meety from "@/assets/meety.png"
+import fo2of from "@/assets/fo2of.png"
 
 export interface Project {
   title: string;
@@ -11,6 +12,7 @@ export interface Project {
   tag: string[];
   image: StaticImageData;
   url?: string
+  hidden?: boolean
 }
 
 export const projects: Project[] = [
@@ -46,5 +48,13 @@ export const projects: Project[] = [
     description: "Manta is a clinic management system built to streamline daily operations for healthcare providers. It centralizes patient records, treatment history, billing, and clinical workflows so clinics can deliver more efficient and organized care.",
     tag: ["WebApplication", "Clinic Management System", "B2BSoftware"],
     image: manta,
+  },
+  {
+    title: "FO2OF",
+    description: "FO2OF (Fantasy Online 2 Outfit Finder) is a fan-made companion tool for the game Fantasy Online 2. It lets players mix and match equipment to preview and share character outfits, and simulate stat builds before committing points in-game.",
+    tag: ["Website", "Fan Project", "Game Companion Tool"],
+    image: fo2of,
+    url: "https://fo2of.vercel.app/",
+    hidden: true
   }
 ];

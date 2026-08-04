@@ -8,7 +8,7 @@ export function ProjectsSection() {
       <p className="mt-2 text-muted">Projects I&apos;ve contributed to.</p>
 
       <div className="mt-10 grid gap-6">
-        {projects.map((project) => (
+        {projects.filter((project) => !project.hidden).map((project) => (
           <article
             key={project.title}
             className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface sm:flex-row"
