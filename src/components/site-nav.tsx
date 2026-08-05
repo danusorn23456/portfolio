@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { portfolio } from "@/lib/portfolio";
 import { DownloadResumeButton } from "@/components/download-resume-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -22,7 +23,10 @@ export function SiteNav() {
         >
           {portfolio.profile.name}
         </Link>
-        <DownloadResumeButton className="shrink-0 whitespace-nowrap rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-60" />
+        <div className="flex shrink-0 items-center gap-3">
+          <ThemeToggle />
+          <DownloadResumeButton className="shrink-0 whitespace-nowrap rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-60" />
+        </div>
       </div>
       <nav className="border-t border-border/60">
         <ul className="mx-auto flex w-full max-w-5xl items-center gap-6 overflow-x-auto px-6 py-2 text-sm text-muted">
