@@ -26,7 +26,12 @@ export function DownloadResumeButton({ className }: { className?: string }) {
   }
 
   return (
-    <button type="button" onClick={handleDownload} disabled={isGenerating} className={className}>
+    <button
+      type="button"
+      onClick={handleDownload}
+      disabled={isGenerating}
+      className={className}
+    >
       {isGenerating ? "Generating…" : "Download resume"}
     </button>
   );

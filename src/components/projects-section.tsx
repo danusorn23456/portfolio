@@ -3,8 +3,13 @@ import { projects } from "@/lib/projects";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16">
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Projects</h2>
+    <section
+      id="projects"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        Projects
+      </h2>
       <p className="mt-2 text-muted">Projects I&apos;ve contributed to.</p>
 
       <div className="mt-10 grid gap-6">

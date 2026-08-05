@@ -4,8 +4,13 @@ export function ContactSection() {
   const { contact } = portfolio;
 
   return (
-    <section id="contact" className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16">
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Contact</h2>
+    <section
+      id="contact"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        Contact
+      </h2>
       <p className="mt-2 text-muted">Let&apos;s work together.</p>
 
       <div className="mt-10 flex flex-wrap gap-3">

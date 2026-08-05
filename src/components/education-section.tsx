@@ -2,8 +2,13 @@ import { portfolio } from "@/lib/portfolio";
 
 export function EducationSection() {
   return (
-    <section id="education" className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16">
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Education</h2>
+    <section
+      id="education"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        Education
+      </h2>
       <p className="mt-2 text-muted">My academic and training background.</p>
 
       <ol className="mt-10 space-y-6 border-l border-border pl-8">

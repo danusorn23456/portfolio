@@ -2,8 +2,13 @@ import { portfolio } from "@/lib/portfolio";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16">
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Skills</h2>
+    <section
+      id="skills"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        Skills
+      </h2>
       <p className="mt-2 text-muted">Technologies and tools I work with.</p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
