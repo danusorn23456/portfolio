@@ -174,7 +174,7 @@ export function ResumeDocument() {
           <Text style={styles.description}>{profile.description}</Text>
         </Section>
 
-        <Section title="SKILLS">
+        <Section title="PRIMARY STACK">
           <Text style={styles.skillItems}>{main_skills.join(", ")}</Text>
         </Section>
 
