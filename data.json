@@ -39,16 +39,17 @@
     },
     {
       "category": "UI & Styling",
-      "items": ["Tailwind CSS", "Material UI", "Mantine UI", "Styled CSS"]
+      "items": ["Tailwind CSS", "Material UI", "Mantine UI", "Styled CSS", "SCSS"]
     },
     {
       "category": "State Management",
-      "items": ["Redux", "Jotai"]
+      "items": ["Redux", "Jotai", "Context API"]
     },
     {
       "category": "APIs & Data",
       "items": [
         "Apollo client",
+        "React Query",
         "Axios",
         "WebRTC",
         "Socket.IO",
@@ -106,11 +107,10 @@
       "overview": "Software Developer working across web and mobile, with a growing focus on cross-team collaboration, technical feasibility, UI/UX discussions, and process improvements alongside hands-on coding.",
       "keyContributions": [
         "Handled shifting requirements and tightened deadlines, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
-        "Built and maintained core marketplace functionality including listings, search, filtering, sorting, and pagination used by buyers and sellers in production.",
-        "Built and maintained mental health mobile app, from initial build through release, including real-time Firebase push notifications to keep users engaged without manual follow-up.",
-        "Designed and implemented the complete authentication system, including email/password, Google Sign-In, Apple Sign-In, OTP verification, password recovery, and account linking.",
+        "Familiar with web application development across marketplace functionality, mobile applications, and CMS (content management systems).",
         "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
-        "Set up CI/CD pipelines with GitHub Actions and Railway auto-deploy across separate development, staging, and production branches with environment-specific configs, and deployed mobile apps via App Store Connect and Google Play Console.",
+        "Deployed and managed web and mobile apps across separate development, staging, and production environments, using GitHub Actions and Railway auto-deploy with environment-specific configs.",
+        "Hands-on experience with Firebase Cloud Messaging and Google Cloud Platform APIs, along with app release management through App Store Connect and Google Play Console.",
         "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp."
       ],
       "techStack": [
