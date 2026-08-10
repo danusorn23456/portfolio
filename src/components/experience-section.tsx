@@ -4,12 +4,17 @@ export function ExperienceSection() {
   const years = totalExperienceYears(portfolio.experience);
 
   return (
-    <section id="experience" className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16">
+    <section
+      id="experience"
+      className="mx-auto w-full max-w-5xl scroll-mt-20 px-6 py-16"
+    >
       <h2 className="flex items-baseline gap-2 text-2xl font-semibold tracking-tight sm:text-3xl">
         Experience
         <span className="text-sm font-normal text-muted">{years}+ years</span>
       </h2>
-      <p className="mt-2 text-muted">Where I&apos;ve worked and what I&apos;ve built.</p>
+      <p className="mt-2 text-muted">
+        Where I&apos;ve worked and what I&apos;ve built.
+      </p>
 
       <ol className="mt-10 space-y-10 border-l border-border pl-8">
         {portfolio.experience.map((job) => (

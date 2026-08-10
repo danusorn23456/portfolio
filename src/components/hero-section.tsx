@@ -10,10 +10,19 @@ export function HeroSection() {
   const { profile } = portfolio;
   const [before, after] = profile.description.split(RAINBOW_PHRASE);
   const years = totalExperienceYears(portfolio.experience);
-  const quickFacts = [`${years}+ years`, "JavaScript", "React.js", "Node.js", "TypeScript"];
+  const quickFacts = [
+    `${years}+ years`,
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "TypeScript",
+  ];
 
   return (
-    <section id="top" className="relative mx-auto w-full max-w-5xl overflow-hidden px-6 pb-20 pt-16 sm:pt-24">
+    <section
+      id="top"
+      className="relative mx-auto w-full max-w-5xl overflow-hidden px-6 pb-20 pt-16 sm:pt-24"
+    >
       <div className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[420px] max-w-[40%] sm:block">
         <Image
           src={humanRatio}
@@ -26,7 +35,10 @@ export function HeroSection() {
         />
       </div>
 
-      <div id="about" className="relative flex scroll-mt-24 flex-col items-start gap-8 sm:flex-row sm:items-center">
+      <div
+        id="about"
+        className="relative flex scroll-mt-24 flex-col items-start gap-8 sm:flex-row sm:items-center"
+      >
         <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-accent-soft font-mono text-2xl font-semibold text-accent">
           {initials(profile.name)}
         </div>

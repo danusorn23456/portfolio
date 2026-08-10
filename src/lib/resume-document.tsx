@@ -1,4 +1,11 @@
-import { Document, Page, Text, View, Image, StyleSheet } from "@react-pdf/renderer";
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  Image,
+  StyleSheet,
+} from "@react-pdf/renderer";
 import QRCode from "qrcode";
 import { portfolio, totalExperienceYears } from "@/lib/portfolio";
 
@@ -133,7 +140,13 @@ const styles = StyleSheet.create({
   },
 });
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <View>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -155,18 +168,24 @@ export function ResumeDocument() {
           <View>
             <Text style={styles.name}>{profile.name}</Text>
             <Text style={styles.role}>
-              Software Developer · {profile.age} y.o. · {profile.location} · {years}+ years experience
+              Software Developer · {profile.age} y.o. · {profile.location} ·{" "}
+              {years}+ years experience
             </Text>
             <View style={styles.contactRow}>
               <Text style={styles.contactText}>{contact.email}</Text>
               <Text style={styles.contactText}>{contact.phone}</Text>
               {portfolioUrl ? (
-                <Text style={styles.contactText}>{portfolioUrl.replace(/^https?:\/\//, "")}</Text>
+                <Text style={styles.contactText}>
+                  {portfolioUrl.replace(/^https?:\/\//, "")}
+                </Text>
               ) : null}
             </View>
           </View>
           {portfolioUrl ? (
-            <Image style={styles.qrCode} src={() => QRCode.toDataURL(portfolioUrl, { margin: 0 })} />
+            <Image
+              style={styles.qrCode}
+              src={() => QRCode.toDataURL(portfolioUrl, { margin: 0 })}
+            />
           ) : null}
         </View>
 
@@ -180,7 +199,10 @@ export function ResumeDocument() {
 
         <Section title="EXPERIENCE">
           {experience.map((job) => (
-            <View key={`${job.company}-${job.period.start}`} style={styles.jobBlock}>
+            <View
+              key={`${job.company}-${job.period.start}`}
+              style={styles.jobBlock}
+            >
               <View wrap={false}>
                 <View style={styles.jobHeader}>
                   <Text style={styles.jobTitle}>
@@ -205,8 +227,14 @@ export function ResumeDocument() {
 
         <Section title="EDUCATION">
           {education.map((edu) => (
-            <View key={`${edu.school}-${edu.program}`} style={styles.educationEntry} wrap={false}>
-              {edu.period?.end ? <Text style={styles.educationYear}>{edu.period.end}</Text> : null}
+            <View
+              key={`${edu.school}-${edu.program}`}
+              style={styles.educationEntry}
+              wrap={false}
+            >
+              {edu.period?.end ? (
+                <Text style={styles.educationYear}>{edu.period.end}</Text>
+              ) : null}
               <Text style={styles.educationProgram}>{edu.program}</Text>
               <Text style={styles.educationSchool}>{edu.school}</Text>
             </View>
