@@ -16,7 +16,8 @@
     "Next.js",
     "TypeScript",
     "JavaScript",
-    "Node.js"
+    "Node.js",
+    "GraphQL"
   ],
   "skills": [
     {
@@ -32,7 +33,13 @@
     },
     {
       "category": "UI & Styling",
-      "items": ["Tailwind CSS", "Material UI", "Mantine UI", "Styled CSS", "SCSS"]
+      "items": [
+        "Tailwind CSS",
+        "Material UI",
+        "Mantine UI",
+        "Styled CSS",
+        "SCSS"
+      ]
     },
     {
       "category": "State Management",
@@ -99,12 +106,17 @@
       "workType": "Remote",
       "overview": "Software Developer working across web and mobile, with a growing focus on cross-team collaboration, technical feasibility, UI/UX discussions, and process improvements alongside hands-on coding.",
       "keyContributions": [
-        "Handled shifting requirements and tightened deadlines, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
-        "Familiar with web application development across marketplace functionality, mobile applications, and CMS (content management systems).",
-        "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
+        "Built a complete authentication system including OTP verification, social sign-in (OAuth), password management, and secure token refresh/rotation.",
+        "Designed a reusable shared component library with a consistent, documented structure and Storybook-based visual testing.",
+        "Maintained a GraphQL code generation, producing fully typed queries, mutations, and React hooks from schema introspection.",
         "Deployed and managed web and mobile apps across separate development, staging, and production environments, using GitHub Actions and Railway auto-deploy with environment-specific configs.",
-        "Hands-on experience with Firebase Cloud Messaging and Google Cloud Platform APIs, along with app release management through App Store Connect and Google Play Console.",
-        "Delivered feature work and issue fixes sprint by sprint, tracked and managed through ClickUp."
+        "Implemented complex, multi-step form inputs and validation logic for a CMS project using React Hook Form and Zod, persisting form state to URL query params so progress survives refreshes and reloads.",
+        "Implemented native social sharing along with deep linking and App Links/Universal Links on mobile, routing shared links directly to in-app content, with Open Graph metadata for rich link previews.",
+        "Took ownership of assigned work end-to-end, tracking progress, following up on client feedback, and implementing fixes or additional features based on supplementary requirement documents.",
+        "Handled shifting requirements and tightened deadlines, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
+        "Collaborated in a feature-based architecture, organizing domain logic, shared UI, and providers for scalable team development.",
+        "Worked closely with Design, BA, PM, QA, and backend engineers, giving feedback and suggestions and responding quickly whenever needed.",
+        "Familiar with web application development across marketplace functionality, mobile applications, and CMS, with hands-on experience integrating Firebase Cloud Messaging, Google Cloud Platform APIs, and app release management via App Store Connect and Google Play Console."
       ],
       "techStack": [
         "React.js",
@@ -115,6 +127,7 @@
         "GitHub Actions",
         "Railway",
         "Apollo client",
+        "GraphQL",
         "Claude Code",
         "Socket.IO",
         "Mantine UI",
@@ -122,7 +135,9 @@
         "Google Play Console",
         "App Store Connect",
         "React Hook Form",
-        "Zod"
+        "Zod",
+        "Storybook",
+        "Open Graph"
       ]
     },
     {
