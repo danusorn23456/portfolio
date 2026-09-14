@@ -110,7 +110,7 @@
         "Designed a reusable shared component library with a consistent, documented structure and Storybook-based visual testing.",
         "Maintained a GraphQL code generation, producing fully typed queries, mutations, and React hooks from schema introspection.",
         "Deployed and managed web and mobile apps across separate development, staging, and production environments, using GitHub Actions and Railway auto-deploy with environment-specific configs.",
-        "Implemented complex, multi-step form inputs and validation logic for a CMS project using React Hook Form and Zod, persisting form state to URL query params so progress survives refreshes and reloads.",
+        "Implemented complex, multi-step form inputs and validation logic for a CMS project using React Hook Form and Zod",
         "Implemented native social sharing along with deep linking and App Links/Universal Links on mobile, routing shared links directly to in-app content, with Open Graph metadata for rich link previews.",
         "Took ownership of assigned work end-to-end, tracking progress, following up on client feedback, and implementing fixes or additional features based on supplementary requirement documents.",
         "Handled shifting requirements and tightened deadlines, proactively identifying the best approach and balancing scope, quality, and deadline tradeoffs to deliver results.",
